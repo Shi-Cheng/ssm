@@ -17,49 +17,49 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/bootstrap/css/bootstrap.min.css">
+	href="../plugins/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/font-awesome/css/font-awesome.min.css">
+	href="../plugins/font-awesome/css/font-awesome.min.css">
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/ionicons/css/ionicons.min.css">
+	href="../plugins/ionicons/css/ionicons.min.css">
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/iCheck/square/blue.css">
+	href="../plugins/iCheck/square/blue.css">
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/morris/morris.css">
+	href="../plugins/morris/morris.css">
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+	href="../plugins/jvectormap/jquery-jvectormap-1.2.2.css">
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/datepicker/datepicker3.css">
+	href="../plugins/datepicker/datepicker3.css">
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/daterangepicker/daterangepicker.css">
+	href="../plugins/daterangepicker/daterangepicker.css">
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+	href="../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/datatables/dataTables.bootstrap.css">
+	href="../plugins/datatables/dataTables.bootstrap.css">
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/treeTable/jquery.treetable.css">
+	href="../plugins/treeTable/jquery.treetable.css">
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/treeTable/jquery.treetable.theme.default.css">
+	href="../plugins/treeTable/jquery.treetable.theme.default.css">
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/select2/select2.css">
+	href="../plugins/select2/select2.css">
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/colorpicker/bootstrap-colorpicker.min.css">
+	href="../plugins/colorpicker/bootstrap-colorpicker.min.css">
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/bootstrap-markdown/css/bootstrap-markdown.min.css">
+	href="../plugins/bootstrap-markdown/css/bootstrap-markdown.min.css">
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/adminLTE/css/AdminLTE.css">
+	href="../plugins/adminLTE/css/AdminLTE.css">
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/adminLTE/css/skins/_all-skins.min.css">
+	href="../plugins/adminLTE/css/skins/_all-skins.min.css">
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/style.css">
+	href="../css/style.css">
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/ionslider/ion.rangeSlider.css">
+	href="../plugins/ionslider/ion.rangeSlider.css">
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/ionslider/ion.rangeSlider.skinNice.css">
+	href="../plugins/ionslider/ion.rangeSlider.skinNice.css">
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/bootstrap-slider/slider.css">
+	href="../plugins/bootstrap-slider/slider.css">
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.css">
+	href="../plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.css">
 </head>
 
 <body class="hold-transition skin-purple sidebar-mini">
@@ -111,7 +111,7 @@
 								<div class="form-group form-inline">
 									<div class="btn-group">
 										<button type="button" class="btn btn-default" title="新建"
-											onclick="location.href='${pageContext.request.contextPath}/pages/product-add.jsp'">
+											onclick="location.href='../pages/product-add.jsp'">
 											<i class="fa fa-file-o"></i> 新建
 										</button>
 										<button type="button" class="btn btn-default" title="删除">
@@ -274,92 +274,92 @@
 
 
 	<script
-		src="${pageContext.request.contextPath}/plugins/jQuery/jquery-2.2.3.min.js"></script>
+		src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/jQueryUI/jquery-ui.min.js"></script>
+		src="../plugins/jQueryUI/jquery-ui.min.js"></script>
 	<script>
 		$.widget.bridge('uibutton', $.ui.button);
 	</script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/bootstrap/js/bootstrap.min.js"></script>
+		src="../plugins/bootstrap/js/bootstrap.min.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/raphael/raphael-min.js"></script>
+		src="../plugins/raphael/raphael-min.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/morris/morris.min.js"></script>
+		src="../plugins/morris/morris.min.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/sparkline/jquery.sparkline.min.js"></script>
+		src="../plugins/sparkline/jquery.sparkline.min.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+		src="../plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+		src="../plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/knob/jquery.knob.js"></script>
+		src="../plugins/knob/jquery.knob.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/daterangepicker/moment.min.js"></script>
+		src="../plugins/daterangepicker/moment.min.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/daterangepicker/daterangepicker.js"></script>
+		src="../plugins/daterangepicker/daterangepicker.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/daterangepicker/daterangepicker.zh-CN.js"></script>
+		src="../plugins/daterangepicker/daterangepicker.zh-CN.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/datepicker/bootstrap-datepicker.js"></script>
+		src="../plugins/datepicker/bootstrap-datepicker.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/datepicker/locales/bootstrap-datepicker.zh-CN.js"></script>
+		src="../plugins/datepicker/locales/bootstrap-datepicker.zh-CN.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+		src="../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+		src="../plugins/slimScroll/jquery.slimscroll.min.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/fastclick/fastclick.js"></script>
+		src="../plugins/fastclick/fastclick.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/iCheck/icheck.min.js"></script>
+		src="../plugins/iCheck/icheck.min.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/adminLTE/js/app.min.js"></script>
+		src="../plugins/adminLTE/js/app.min.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/treeTable/jquery.treetable.js"></script>
+		src="../plugins/treeTable/jquery.treetable.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/select2/select2.full.min.js"></script>
+		src="../plugins/select2/select2.full.min.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/colorpicker/bootstrap-colorpicker.min.js"></script>
+		src="../plugins/colorpicker/bootstrap-colorpicker.min.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.zh-CN.js"></script>
+		src="../plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.zh-CN.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/bootstrap-markdown/js/bootstrap-markdown.js"></script>
+		src="../plugins/bootstrap-markdown/js/bootstrap-markdown.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/bootstrap-markdown/locale/bootstrap-markdown.zh.js"></script>
+		src="../plugins/bootstrap-markdown/locale/bootstrap-markdown.zh.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/bootstrap-markdown/js/markdown.js"></script>
+		src="../plugins/bootstrap-markdown/js/markdown.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/bootstrap-markdown/js/to-markdown.js"></script>
+		src="../plugins/bootstrap-markdown/js/to-markdown.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/ckeditor/ckeditor.js"></script>
+		src="../plugins/ckeditor/ckeditor.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/input-mask/jquery.inputmask.js"></script>
+		src="../plugins/input-mask/jquery.inputmask.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+		src="../plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/input-mask/jquery.inputmask.extensions.js"></script>
+		src="../plugins/input-mask/jquery.inputmask.extensions.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/datatables/jquery.dataTables.min.js"></script>
+		src="../plugins/datatables/jquery.dataTables.min.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/datatables/dataTables.bootstrap.min.js"></script>
+		src="../plugins/datatables/dataTables.bootstrap.min.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/chartjs/Chart.min.js"></script>
+		src="../plugins/chartjs/Chart.min.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/flot/jquery.flot.min.js"></script>
+		src="../plugins/flot/jquery.flot.min.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/flot/jquery.flot.resize.min.js"></script>
+		src="../plugins/flot/jquery.flot.resize.min.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/flot/jquery.flot.pie.min.js"></script>
+		src="../plugins/flot/jquery.flot.pie.min.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/flot/jquery.flot.categories.min.js"></script>
+		src="../plugins/flot/jquery.flot.categories.min.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/ionslider/ion.rangeSlider.min.js"></script>
+		src="../plugins/ionslider/ion.rangeSlider.min.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/bootstrap-slider/bootstrap-slider.js"></script>
+		src="../plugins/bootstrap-slider/bootstrap-slider.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.js"></script>
+		src="../plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/bootstrap-datetimepicker/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+		src="../plugins/bootstrap-datetimepicker/locales/bootstrap-datetimepicker.zh-CN.js"></script>
 	<script>
 		$(document).ready(function() {
 			// 选择框
