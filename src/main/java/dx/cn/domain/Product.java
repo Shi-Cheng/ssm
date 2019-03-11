@@ -5,11 +5,18 @@ public class Product {
     private String productNum; // 编号 唯一
     private String productName; // 名称
     private String cityName; // 出发城市
-    private String departureTimeStr;
+    private String departureTime;
     private double productPrice; // 产品价格
     private String productDesc; // 产品描述
     private Integer productStatus; // 状态 0 关闭 1 开启
-    private String productStatusStr;
+
+    public String getDepartureTime() {
+        return departureTime;
+    }
+
+    public void setDepartureTime(String departureTime) {
+        this.departureTime = departureTime;
+    }
 
     public Integer getId() {
         return id;
@@ -43,14 +50,6 @@ public class Product {
         this.cityName = cityName;
     }
 
-    public String getDepartureTimeStr() {
-        return departureTimeStr;
-    }
-
-    public void setDepartureTimeStr(String departureTimeStr) {
-        this.departureTimeStr = departureTimeStr;
-    }
-
     public double getProductPrice() {
         return productPrice;
     }
@@ -75,14 +74,6 @@ public class Product {
         this.productStatus = productStatus;
     }
 
-    public String getProductStatusStr() {
-        return productStatusStr;
-    }
-
-    public void setProductStatusStr(String productStatusStr) {
-        this.productStatusStr = productStatusStr;
-    }
-
     @Override
     public String toString() {
         return "Product{" +
@@ -90,11 +81,11 @@ public class Product {
                 ", productNum='" + productNum + '\'' +
                 ", productName='" + productName + '\'' +
                 ", cityName='" + cityName + '\'' +
-                ", departureTimeStr='" + departureTimeStr + '\'' +
+                ", departureTime='" + departureTime + '\'' +
                 ", productPrice=" + productPrice +
                 ", productDesc='" + productDesc + '\'' +
                 ", productStatus=" + productStatus +
-                ", productStatusStr='" + productStatusStr + '\'' +
                 '}';
     }
+
 }

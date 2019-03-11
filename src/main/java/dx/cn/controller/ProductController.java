@@ -17,12 +17,13 @@ public class ProductController {
     private IProductService productService;
 
     @RequestMapping("/findAll.do")
-    public String findAll() throws Exception{
+    public ModelAndView findAll() throws Exception{
         System.out.println("====controller====");
         List<Product> products = productService.findAll();
-        for (Product product : products){
-            System.out.println(product);
-        }
-        return "product-list";
+        System.out.println(products);
+        ModelAndView view = new ModelAndView();
+        view.addObject("productList",products);
+        view.setViewName("product-list");
+        return view;
     }
 }
