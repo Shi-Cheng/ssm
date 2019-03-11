@@ -21,4 +21,19 @@ public class ProductServiceImpl implements IProductService {
         System.out.println("====service====");
         return productDao.findAll();
     }
+
+    @Override
+    public void save(Product product) {
+        productDao.save(product);
+    }
+
+    @Override
+    public void deleteProductById(int id) {
+        productDao.deleteProductById(id);
+    }
+
+    @Override
+    public Product findById(int id) {
+        return productDao.findById(id);
+    }
 }

@@ -8,14 +8,10 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-
-<title>数据 - AdminLTE2定制版</title>
+<title>product-page-detail</title>
 <meta name="description" content="AdminLTE2定制版">
 <meta name="keywords" content="AdminLTE2定制版">
 <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-
 <link rel="stylesheet"
 	href="../plugins/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet"
@@ -63,81 +59,37 @@
 </head>
 
 <body class="hold-transition skin-purple sidebar-mini">
-
 	<div class="wrapper">
-
 		<!-- 页面头部 -->
 		<jsp:include page="header.jsp"></jsp:include>
 		<!-- 页面头部 /-->
 		<!-- 导航侧栏 -->
 		<jsp:include page="aside.jsp"></jsp:include>
 		<!-- 导航侧栏 /-->
-
 		<!-- 内容区域 -->
-		<!-- @@master = admin-layout.html-->
-		<!-- @@block = content -->
-
 		<div class="content-wrapper">
-
 			<!-- 内容头部 -->
 			<section class="content-header">
 				<h1>
-					数据管理 <small>数据列表</small>
+					基础数据 <small>订单详情</small>
 				</h1>
 				<ol class="breadcrumb">
-					<li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
+					<li><a href="#"><i class="fa fa-dashboard"></i> 基础数据</a></li>
 					<li><a href="#">数据管理</a></li>
-					<li class="active">数据列表</li>
+					<li class="active">订单列表</li>
 				</ol>
 			</section>
 			<!-- 内容头部 /-->
-
 			<!-- 正文区域 -->
 			<section class="content">
-
 				<!-- .box-body -->
 				<div class="box box-primary">
 					<div class="box-header with-border">
-						<h3 class="box-title">列表</h3>
+						<h3 class="box-title">订单详情</h3>
 					</div>
-
 					<div class="box-body">
-
 						<!-- 数据表格 -->
 						<div class="table-box">
-
-							<!--工具栏-->
-							<div class="pull-left">
-								<div class="form-group form-inline">
-									<div class="btn-group">
-										<button type="button" class="btn btn-default" title="新建"
-											onclick="location.href='../pages/product-add.jsp'">
-											<i class="fa fa-file-o"></i> 新建
-										</button>
-										<button type="button" class="btn btn-default" title="删除">
-											<i class="fa fa-trash-o"></i> 删除
-										</button>
-										<button type="button" class="btn btn-default" title="开启">
-											<i class="fa fa-check"></i> 开启
-										</button>
-										<button type="button" class="btn btn-default" title="屏蔽">
-											<i class="fa fa-ban"></i> 屏蔽
-										</button>
-										<button type="button" class="btn btn-default" title="刷新">
-											<i class="fa fa-refresh"></i> 刷新
-										</button>
-									</div>
-								</div>
-							</div>
-							<div class="box-tools pull-right">
-								<div class="has-feedback">
-									<input type="text" class="form-control input-sm"
-										placeholder="搜索"> <span
-										class="glyphicon glyphicon-search form-control-feedback"></span>
-								</div>
-							</div>
-							<!--工具栏/-->
-
 							<!--数据列表-->
 							<table id="dataList"
 								class="table table-bordered table-striped table-hover dataTable">
@@ -159,7 +111,7 @@
 								<tbody>
 									<c:forEach items="${productList}" var="product">
 										<tr>
-											<td><input name="ids" type="checkbox"></td>
+											<td><input value="${product.id}" name="ids" type="checkbox"></td>
 											<td>${product.id }</td>
 											<td>${product.productNum }</td>
 											<td>${product.productName }</td>
@@ -170,7 +122,7 @@
 											<td class="text-center">${product.productStatus }</td>
 											<td class="text-center">
 												<button type="button" class="btn bg-olive btn-xs">订单</button>
-												<button type="button" class="btn bg-olive btn-xs">详情</button>
+												<button type="button" class="btn bg-olive btn-xs" onclick="location.href='${pageContext.request.contextPath}/product/findById?product_id=${product.id}'">详情</button>
 												<button type="button" class="btn bg-olive btn-xs">编辑</button>
 											</td>
 										</tr>
@@ -178,46 +130,9 @@
 								</tbody>
 							</table>
 							<!--数据列表/-->
-
-							<!--工具栏-->
-							<div class="pull-left">
-								<div class="form-group form-inline">
-									<div class="btn-group">
-										<button type="button" class="btn btn-default" title="新建">
-											<i class="fa fa-file-o"></i> 新建
-										</button>
-										<button type="button" class="btn btn-default" title="删除">
-											<i class="fa fa-trash-o"></i> 删除
-										</button>
-										<button type="button" class="btn btn-default" title="开启">
-											<i class="fa fa-check"></i> 开启
-										</button>
-										<button type="button" class="btn btn-default" title="屏蔽">
-											<i class="fa fa-ban"></i> 屏蔽
-										</button>
-										<button type="button" class="btn btn-default" title="刷新">
-											<i class="fa fa-refresh"></i> 刷新
-										</button>
-									</div>
-								</div>
-							</div>
-							<div class="box-tools pull-right">
-								<div class="has-feedback">
-									<input type="text" class="form-control input-sm"
-										placeholder="搜索"> <span
-										class="glyphicon glyphicon-search form-control-feedback"></span>
-								</div>
-							</div>
-							<!--工具栏/-->
-
 						</div>
 						<!-- 数据表格 /-->
-
-
 					</div>
-					<!-- /.box-body -->
-
-					<!-- .box-footer-->
 					<div class="box-footer">
 						<div class="pull-left">
 							<div class="form-group form-inline">
@@ -246,33 +161,20 @@
 						</div>
 
 					</div>
-					<!-- /.box-footer-->
-
-
-
 				</div>
-
 			</section>
-			<!-- 正文区域 /-->
-
 		</div>
-		<!-- @@close -->
-		<!-- 内容区域 /-->
-
 		<!-- 底部导航 -->
 		<footer class="main-footer">
 			<div class="pull-right hidden-xs">
 				<b>Version</b> 1.0.8
 			</div>
 			<strong>Copyright &copy; 2014-2017 <a
-				href="http://www.itcast.cn">研究院研发部</a>.
+				href="###">研究院研发部</a>.
 			</strong> All rights reserved.
 		</footer>
 		<!-- 底部导航 /-->
-
 	</div>
-
-
 	<script
 		src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
 	<script
@@ -379,7 +281,27 @@
 				liObj.addClass("active");
 			}
 		}
-
+		/**
+		 * 删除
+		 */
+		function deleteClick(){
+			var product_id = [];
+			$("[name=ids]:checked").each(function () {
+				product_id.push($(this).val());
+			});
+			if(product_id != '' && product_id != null){
+				$.post('/product/delete.do',{'pid':product_id},function (data) {
+					if (data == "0")
+						alert("删除失败！");
+					else {
+						alert("删除成功！");
+						window.location='/product/findAll.do';
+					}
+				});
+			}else{
+				alert('请先选择要删除的内容');
+			}
+		}
 		$(document).ready(function() {
 
 			// 激活导航位置
