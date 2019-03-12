@@ -33,7 +33,6 @@
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer" id="mapperScanner" >
         <property name="basePackage" value="dx.cn.dao" />
     </bean>
-
     <!--配置Spring事务-->
     <!-- 配置Spring的声明式事务管理 -->
     <!-- 配置事务管理器 -->

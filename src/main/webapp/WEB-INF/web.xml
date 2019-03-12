@@ -11,7 +11,6 @@
     <param-value>classpath:applicationContext.xml</param-value>
   </context-param>
 
-
   <!-- 配置监听器  用来解决如下的问题
   Error creating bean with name 'productController': Unsatisfied dependency expressed through field 'productService';
    nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException:
@@ -39,7 +38,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>dispatcherServlet</servlet-name>
-    <url-pattern>/</url-pattern>
+    <url-pattern>*.do</url-pattern>
   </servlet-mapping>
 
   <!-- 配置 springMVC 编码过滤器 -->

@@ -5,7 +5,7 @@
     <!-- 页面meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>product-page-detail</title>
+    <title>order-page-detail</title>
     <meta name="description" content="AdminLTE2定制版">
     <meta name="keywords" content="AdminLTE2定制版">
     <!-- Tell the browser to be responsive to screen width -->
@@ -74,47 +74,28 @@
                             <div class="tab-pane active" id="tab-label">
                                 <h5>产品信息</h5>
                                 <div class="row data-type">
+
                                     <div class="col-md-2 title">订单编号</div>
                                     <div class="col-md-4 data text">
-                                        <input type="text" class="form-control" name="productNum" placeholder="订单编号" value="${product_detail.productNum}">
+                                        <input type="text" class="form-control" name="productNum" placeholder="订单编号" value="${orderDetail.orderNum}">
                                     </div>
+
                                     <div class="col-md-2 title">产品名称</div>
                                     <div class="col-md-4 data text">
-                                        <input type="text" class="form-control" name="productName" placeholder="产品名称" value="${product_detail.productName}">
+                                        <input type="text" class="form-control" name="productName" placeholder="产品描述" value="${orderDetail.orderDesc}">
                                     </div>
-                                    <div class="col-md-2 title">出发时间</div>
-                                    <div class="col-md-4 data text">
-                                        <div class="input-group">
-                                            <div class="input-group-addon">
-                                                <i class="fa fa-calendar"></i>
-                                            </div>
-                                            <input type="text" class="form-control pull-right" value="${product_detail.departureTime}" name="departureTime" placeholder="出发时间" id="dateTimePicker">
-                                        </div>
-                                    </div>
+
                                     <div class="col-md-2 title">出发城市</div>
                                     <div class="col-md-4 data text">
-                                        <input type="text"  name="cityName" class="form-control" placeholder="出发城市" value="${product_detail.cityName}">
+                                        <input type="text"  name="cityName" class="form-control" placeholder="下单时间" value="${orderDetail.orderTime}">
                                     </div>
 
                                     <div class="col-md-2 title">产品价格</div>
                                     <div class="col-md-4 data text">
-                                        <input type="text" name="productPrice" class="form-control" placeholder="产品价格" value="${product_detail.productPrice}">
+                                        <input type="text" name="productPrice" class="form-control" placeholder="订单状态" value="${orderDetail.orderStatus}">
                                     </div>
-
-                                    <div class="col-md-2 title">产品状态</div>
-                                    <div class="col-md-4 data text">
-                                        <select class="form-control" name="productStatus" >
-                                            <option value="0" selected="selected">开启</option>
-                                            <option value="1">关闭</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="col-md-2 title rowHeight2x">其他信息</div>
-                                    <div class="col-md-10 data rowHeight2x">
-                                        <textarea class="form-control" rows="3" name="productDesc" placeholder="请输入...">${product_detail.productDesc}</textarea>
-                                    </div>
-
-                                    <div style="text-align: center;margin-top: 5%;margin-bottom: 2px;">
+                                    <div></div>
+                                    <div style="text-align: center;margin-top: 55px; margin-bottom: 2px;">
                                         <button type="button" class="btn bg-default" onclick="history.back(-1);">返回</button>
                                     </div>
                                 </div>
