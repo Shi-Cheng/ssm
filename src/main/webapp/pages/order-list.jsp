@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="o"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 
@@ -136,7 +137,7 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <o:forEach items="${orderList}" var="orders">
+                            <o:forEach items="${orderList.list}" var="orders">
                                 <tr>
                                     <td><input value="${orders.id}" name="ids" type="checkbox"></td>
                                     <td>${orders.id}</td>
@@ -162,27 +163,26 @@
                 <div class="box-footer">
                     <div class="pull-left">
                         <div class="form-group form-inline">
-                            总共2 页，共14 条数据。 每页 <select class="form-control">
+                            总共${orderList.pages}页，共${orderList.total} 条数据。 每页
+                            <select class="form-control" id="orderChangeNumber" onchange="orderChangeNumber()">
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
                             <option>4</option>
                             <option>5</option>
-                        </select> 条
+                            </select> 条
                         </div>
                     </div>
 
                     <div class="box-tools pull-right">
                         <ul class="pagination">
-                            <li><a href="#" aria-label="Previous">首页</a></li>
-                            <li><a href="#">上一页</a></li>
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li><a href="#">下一页</a></li>
-                            <li><a href="#" aria-label="Next">尾页</a></li>
+                            <li><a href="${pageContext.request.contextPath}/orders/findOrdersAll.do?page=1&size=${orderList.pageSize}" aria-label="Previous">首页</a></li>
+                            <li><a href="${pageContext.request.contextPath}/orders/findOrdersAll.do?page=${orderList.pageNum-1}&size=${orderList.pageSize}">上一页</a></li>
+                            <c:forEach begin="1" end="${orderList.pages}" var="pageNum">
+                                <li><a href="${pageContext.request.contextPath}/orders/findOrdersAll.do?page=${pageNum}&size=${orderList.pageSize}">${pageNum}</a></li>
+                            </c:forEach>
+                            <li><a href="${pageContext.request.contextPath}/orders/findOrdersAll.do?page=${orderList.pageNum+1}&size=${orderList.pageSize}">下一页</a></li>
+                            <li><a href="${pageContext.request.contextPath}/orders/findOrdersAll.do?page=${orderList.pages}&size=${orderList.pageSize}" aria-label="Next">尾页</a></li>
                         </ul>
                     </div>
                 </div>
@@ -306,6 +306,11 @@
             liObj.addClass("active");
         }
     }
+    function orderChangeNumber() {
+        var pageNum = $("#orderChangeNumber").val();
+        location.href = "${pageContext.request.contextPath}/orders/findOrdersAll.do?page=${orderList.pageNum}&size="+pageNum;
+    }
+
     /**
      * 删除
      */

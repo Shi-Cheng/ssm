@@ -16,8 +16,8 @@ public class OrderServiceImpl implements IOrderService {
     private IOrderDao orderDao;
 
     @Override
-    public List<Orders> findOrdersAll() {
-
+    public List<Orders> findOrdersAll(int page,int size) {
+        PageHelper.startPage(page,size);
         return orderDao.findOrdersAll();
     }
 
