@@ -9,6 +9,20 @@ public class Product {
     private double productPrice; // 产品价格
     private String productDesc; // 产品描述
     private Integer productStatus; // 状态 0 关闭 1 开启
+    private String productStatusStr;
+
+    public String getProductStatusStr() {
+        if ( productStatus == 0){
+            productStatusStr = "关闭";
+        }else if ( productStatus == 1){
+            productStatusStr ="开启";
+        }
+        return productStatusStr;
+    }
+
+    public void setProductStatusStr(String productStatusStr) {
+        this.productStatusStr = productStatusStr;
+    }
 
     public String getDepartureTime() {
         return departureTime;

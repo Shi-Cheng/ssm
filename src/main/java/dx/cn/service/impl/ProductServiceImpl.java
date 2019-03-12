@@ -1,5 +1,6 @@
 package dx.cn.service.impl;
 
+import com.github.pagehelper.PageHelper;
 import dx.cn.dao.IProductDao;
 import dx.cn.domain.Product;
 import dx.cn.service.IProductService;
@@ -17,8 +18,10 @@ public class ProductServiceImpl implements IProductService {
     private IProductDao productDao;
 
     @Override
-    public List<Product> findAll() throws Exception {
+    public List<Product> findAll(int size,int page) throws Exception {
         System.out.println("====service====");
+        //参数pageNum是页码值  参数pageSize代表是每页显示条数
+        PageHelper.startPage(size,page);
         return productDao.findAll();
     }
 

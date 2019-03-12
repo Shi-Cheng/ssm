@@ -138,7 +138,7 @@
 									</tr>
 								</thead>
 								<tbody>
-									<c:forEach items="${productList}" var="product">
+									<c:forEach items="${productList.list}" var="product">
 										<tr>
 											<td><input value="${product.id}" name="ids" type="checkbox"></td>
 											<td>${product.id }</td>
@@ -148,7 +148,7 @@
 											<td>${product.departureTime }</td>
 											<td class="text-center">${product.productPrice }</td>
 											<td>${product.productDesc }</td>
-											<td class="text-center">${product.productStatus }</td>
+											<td class="text-center">${product.productStatusStr}</td>
 											<td class="text-center">
 												<button type="button" class="btn bg-olive btn-xs">订单</button>
 												<button type="button" class="btn bg-olive btn-xs" onclick="location.href='${pageContext.request.contextPath}/product/findById.do?product_id=${product.id}'">详情</button>
@@ -177,7 +177,7 @@
 
 						<div class="box-tools pull-right">
 							<ul class="pagination">
-								<li><a href="#" aria-label="Previous">首页</a></li>
+								<li><a href="${pageContext.request.contextPath}/product/findAll.do?page=1&size=${productList.pageSize}" aria-label="Previous">首页</a></li>
 								<li><a href="#">上一页</a></li>
 								<li><a href="#">1</a></li>
 								<li><a href="#">2</a></li>
@@ -185,7 +185,7 @@
 								<li><a href="#">4</a></li>
 								<li><a href="#">5</a></li>
 								<li><a href="#">下一页</a></li>
-								<li><a href="#" aria-label="Next">尾页</a></li>
+								<li><a href="${pageContext.request.contextPath}/product/findAll.do?page=${productList.pages}&size=${productList.pageSize}" aria-label="Next">尾页</a></li>
 							</ul>
 						</div>
 					</div>

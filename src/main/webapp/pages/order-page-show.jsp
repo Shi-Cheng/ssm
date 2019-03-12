@@ -92,7 +92,7 @@
 
                                     <div class="col-md-2 title">产品价格</div>
                                     <div class="col-md-4 data text">
-                                        <input type="text" name="productPrice" class="form-control" placeholder="订单状态" value="${orderDetail.orderStatus}">
+                                        <input type="text" name="productPrice" class="form-control" placeholder="订单状态" value="${orderDetail.orderStatusStr}">
                                     </div>
                                     <div></div>
                                     <div style="text-align: center;margin-top: 55px; margin-bottom: 2px;">

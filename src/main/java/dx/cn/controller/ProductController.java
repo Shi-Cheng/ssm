@@ -1,4 +1,5 @@
 package dx.cn.controller;
+import com.github.pagehelper.PageInfo;
 import dx.cn.domain.Product;
 import dx.cn.service.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,11 +22,21 @@ public class ProductController {
      * @return
      * @throws Exception
      */
+//    @RequestMapping("/findAll.do")
+//    public ModelAndView findAll() throws Exception{
+//        List<Product> products = productService.findAll();
+//        ModelAndView view = new ModelAndView();
+//        view.addObject("productList",products);
+//        view.setViewName("product-list");
+//        return view;
+//    }
     @RequestMapping("/findAll.do")
-    public ModelAndView findAll() throws Exception{
-        List<Product> products = productService.findAll();
+    public ModelAndView findAll(@RequestParam(name = "page",required = true,defaultValue = "1") int page,@RequestParam(name ="size",required = true,defaultValue = "4") int size) throws Exception{
         ModelAndView view = new ModelAndView();
-        view.addObject("productList",products);
+        List<Product> products = productService.findAll(page,size);
+        //PageInfo就是一个分页Bean
+        PageInfo pageInfo = new PageInfo(products);
+        view.addObject("productList",pageInfo);
         view.setViewName("product-list");
         return view;
     }

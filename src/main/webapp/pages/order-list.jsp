@@ -128,7 +128,7 @@
                                 </th>
                                 <th class="sorting_asc">ID</th>
                                 <th class="sorting_desc">订单编号</th>
-                                <th class="sorting_asc sorting_asc_disabled">订单数量</th>
+                                <th class="sorting_asc sorting_asc_disabled">产品名称</th>
                                 <th class="sorting_desc sorting_desc_disabled">金额</th>
                                 <th class="sorting">下单时间</th>
                                 <th class="text-center sorting">订单状态</th>
@@ -141,11 +141,11 @@
                                     <td><input value="${orders.id}" name="ids" type="checkbox"></td>
                                     <td>${orders.id}</td>
                                     <td>${orders.orderNum}</td>
-                                    <td>${orders.peopleCount }</td>
-                                    <td>${orders.orderTime }</td>
+                                    <td>${orders.product.productName }</td>
+                                    <td>${orders.product.productPrice}</td>
                                     <td>${orders.orderDesc}</td>
-                                    <td>${orders.payType}</td>
-                                    <td class="text-center">${orders.orderStatus}</td>
+                                    <td>${orders.payTypeStr}</td>
+                                    <td class="text-center">${orders.orderStatusStr}</td>
                                     <td class="text-center">
                                         <button type="button" class="btn bg-olive btn-xs">订单</button>
                                         <button type="button" class="btn bg-olive btn-xs" onclick="location.href='${pageContext.request.contextPath}/orders/findOrderById.do?order_id=${orders.id}'">详情</button>

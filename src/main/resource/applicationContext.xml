@@ -27,6 +27,20 @@
     <!-- 把交给IOC管理 SqlSessionFactory -->
     <bean class="org.mybatis.spring.SqlSessionFactoryBean" id="factory" >
         <property name="dataSource" ref="dataSource" />
+        <!--传入PageHelper的插件-->
+        <property name="plugins">
+            <array>
+                <!--传入插件的对象-->
+                <bean class="com.github.pagehelper.PageInterceptor">
+                    <property name="properties">
+                        <props>
+                            <prop key="helperDialect">mysql</prop>
+                            <prop key="reasonable">true</prop>
+                        </props>
+                    </property>
+                </bean>
+            </array>
+        </property>
     </bean>
     <!--自动扫描所有Mapper接口和文件-->
     <!-- 扫描dao接口 -->

@@ -8,13 +8,29 @@ public class Orders {
     private String orderTime;
     private String orderTimeStr;
     private int orderStatus;
+    private String orderStatusStr;//用户状态的判断
+
     private int peopleCount;
     private Product product;
     private List<Traveller> travellers;
     private Member member;
     private Integer payType;
-    private String payTypeStr;
+    private String payTypeStr; //
     private String orderDesc;
+
+    public String getOrderStatusStr() {
+        //订单状态的判断
+        if (orderStatus == 0){
+            orderStatusStr="未支付";
+        }else if(orderStatus == 1){
+            orderStatusStr ="支付";
+        }
+        return orderStatusStr;
+    }
+
+    public void setOrderStatusStr(String orderStatusStr) {
+        this.orderStatusStr = orderStatusStr;
+    }
 
     public int getId() {
         return id;
@@ -93,14 +109,24 @@ public class Orders {
     }
 
     public void setPayType(Integer payType) {
+
         this.payType = payType;
     }
 
     public String getPayTypeStr() {
+        //支付方式(0 支付宝 1 微信 2其它)
+        if (payType == 0){
+            payTypeStr="支付宝";
+        }else if(payType == 1){
+            payTypeStr ="微信";
+        }else if(payType == 2){
+            payTypeStr ="其他";
+        }
         return payTypeStr;
     }
 
     public void setPayTypeStr(String payTypeStr) {
+
         this.payTypeStr = payTypeStr;
     }
 

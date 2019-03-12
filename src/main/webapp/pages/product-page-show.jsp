@@ -103,10 +103,7 @@
 
                                     <div class="col-md-2 title">产品状态</div>
                                     <div class="col-md-4 data text">
-                                        <select class="form-control" name="productStatus" >
-                                            <option value="0" selected="selected">开启</option>
-                                            <option value="1">关闭</option>
-                                        </select>
+                                        <input type="text" name="productPrice" class="form-control" placeholder="产品状态" value="${product_detail.productStatusStr}">
                                     </div>
 
                                     <div class="col-md-2 title rowHeight2x">其他信息</div>
