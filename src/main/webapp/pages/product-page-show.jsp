@@ -76,11 +76,11 @@
                                 <div class="row data-type">
                                     <div class="col-md-2 title">订单编号</div>
                                     <div class="col-md-4 data text">
-                                        <input type="text" class="form-control" name="productNum" placeholder="订单编号" value="${product_detail.productNum}">
+                                        <input type="text" class="form-control" name="productNum" placeholder="订单编号" value="${product_detail.productNum}" readonly="readonly">
                                     </div>
                                     <div class="col-md-2 title">产品名称</div>
                                     <div class="col-md-4 data text">
-                                        <input type="text" class="form-control" name="productName" placeholder="产品名称" value="${product_detail.productName}">
+                                        <input type="text" class="form-control" name="productName" placeholder="产品名称" value="${product_detail.productName}" readonly="readonly">
                                     </div>
                                     <div class="col-md-2 title">出发时间</div>
                                     <div class="col-md-4 data text">
@@ -88,27 +88,27 @@
                                             <div class="input-group-addon">
                                                 <i class="fa fa-calendar"></i>
                                             </div>
-                                            <input type="text" class="form-control pull-right" value="${product_detail.departureTime}" name="departureTime" placeholder="出发时间" id="dateTimePicker">
+                                            <input type="text" class="form-control pull-right" readonly="readonly" value="${product_detail.departureTime}" name="departureTime" placeholder="出发时间" id="dateTimePicker">
                                         </div>
                                     </div>
                                     <div class="col-md-2 title">出发城市</div>
                                     <div class="col-md-4 data text">
-                                        <input type="text"  name="cityName" class="form-control" placeholder="出发城市" value="${product_detail.cityName}">
+                                        <input type="text"  name="cityName" class="form-control" readonly="readonly" placeholder="出发城市" value="${product_detail.cityName}">
                                     </div>
 
                                     <div class="col-md-2 title">产品价格</div>
                                     <div class="col-md-4 data text">
-                                        <input type="text" name="productPrice" class="form-control" placeholder="产品价格" value="${product_detail.productPrice}">
+                                        <input type="text" name="productPrice" class="form-control"readonly="readonly" placeholder="产品价格" value="${product_detail.productPrice}">
                                     </div>
 
                                     <div class="col-md-2 title">产品状态</div>
                                     <div class="col-md-4 data text">
-                                        <input type="text" name="productPrice" class="form-control" placeholder="产品状态" value="${product_detail.productStatusStr}">
+                                        <input type="text" name="productPrice" class="form-control" readonly="readonly" placeholder="产品状态" value="${product_detail.productStatusStr}">
                                     </div>
 
                                     <div class="col-md-2 title rowHeight2x">其他信息</div>
                                     <div class="col-md-10 data rowHeight2x">
-                                        <textarea class="form-control" rows="3" name="productDesc" placeholder="请输入...">${product_detail.productDesc}</textarea>
+                                        <textarea class="form-control" rows="3" name="productDesc" readonly="readonly" placeholder="请输入...">${product_detail.productDesc}</textarea>
                                     </div>
 
                                     <div style="text-align: center;margin-top: 5%;margin-bottom: 2px;">

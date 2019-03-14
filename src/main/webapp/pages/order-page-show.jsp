@@ -71,36 +71,122 @@
                         <!--tab内容-->
                         <div class="tab-content">
                             <!--label显示的内容-->
+                            <%--订单信息--%>
                             <div class="tab-pane active" id="tab-label">
-                                <h5>产品信息</h5>
+                                <h5>订单信息</h5>
                                 <div class="row data-type">
 
                                     <div class="col-md-2 title">订单编号</div>
                                     <div class="col-md-4 data text">
-                                        <input type="text" class="form-control" name="productNum" placeholder="订单编号" value="${orderDetail.orderNum}">
+                                        <input type="text" class="form-control" name="productNum" placeholder="订单编号" value="${orderDetail.orderNum}" readonly="readonly">
                                     </div>
-
-                                    <div class="col-md-2 title">产品名称</div>
+                                    <div class="col-md-2 title">下单时间</div>
+                                    <div class="col-md-4 data">
+                                        <div class="input-group date">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" class="form-control pull-right" id="datepicker-a3" readonly="readonly" value="${orderDetail.orderTimeStr}">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 title">路线名称</div>
                                     <div class="col-md-4 data text">
-                                        <input type="text" class="form-control" name="productName" placeholder="产品描述" value="${orderDetail.orderDesc}">
+                                        <input type="text" class="form-control" name="productName" placeholder="路线名称" value="${orderDetail.product.productName}" readonly="readonly">
                                     </div>
-
                                     <div class="col-md-2 title">出发城市</div>
                                     <div class="col-md-4 data text">
-                                        <input type="text"  name="cityName" class="form-control" placeholder="下单时间" value="${orderDetail.orderTime}">
+                                        <input type="text"  name="cityName" class="form-control" placeholder="出发城市" value="${orderDetail.product.cityName}" readonly="readonly">
+                                    </div>
+                                    <div class="col-md-2 title">出发时间</div>
+                                    <div class="col-md-4 data">
+                                        <div class="input-group date">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" name="productPrice" class="form-control" placeholder="出发时间" value="${orderDetail.product.departureTime}" readonly="readonly">
+                                        </div>
                                     </div>
 
-                                    <div class="col-md-2 title">产品价格</div>
+                                    <div class="col-md-2 title">出游人数</div>
                                     <div class="col-md-4 data text">
-                                        <input type="text" name="productPrice" class="form-control" placeholder="订单状态" value="${orderDetail.orderStatusStr}">
+                                        <input type="text" name="productPrice" class="form-control" placeholder="出游人数" value="${orderDetail.peopleCount}" readonly="readonly">
                                     </div>
-                                    <div></div>
-                                    <div style="text-align: center;margin-top: 55px; margin-bottom: 2px;">
-                                        <button type="button" class="btn bg-default" onclick="history.back(-1);">返回</button>
+
+                                    <div class="col-md-2 title rowHeight2x">其他信息</div>
+                                    <div class="col-md-10 data rowHeight2x">
+                                        <textarea class="form-control" rows="3" placeholder="其他信息">${orderDetail.orderDesc }</textarea>
                                     </div>
                                 </div>
                             </div>
+                            <%--/订单信息--%>
+                            <!--游客信息-->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">游客信息</div>
+                                <!--数据列表-->
+                                <table id="dataList"
+                                       class="table table-bordered table-striped table-hover dataTable">
+                                    <thead>
+                                    <tr>
+                                        <th class="">人群</th>
+                                        <th class="">姓名</th>
+                                        <th class="">性别</th>
+                                        <th class="">手机号码</th>
+                                        <th class="">证件类型</th>
+                                        <th class="">证件号码</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <c:forEach var="traveller" items="${orderDetail.travellers}">
+                                        <tr>
+                                            <td>${traveller.travellerTypeStr}</td>
+                                            <td><input type="text" size="10" value="${traveller.name }" readonly="readonly"></td>
+                                            <td><input type="text" size="10" value="${traveller.sex }" readonly="readonly"></td>
+                                            <td><input type="text" size="20" value="${traveller.phoneNum }" readonly="readonly"></td>
+                                            <td><input type="text" size="15" value="${traveller.credentialsTypeStr}" readonly="readonly"></td>
+                                            <td><input type="text" size="28" value="${traveller.credentialsNum }" readonly="readonly"></td>
+                                        </tr>
+                                    </c:forEach>
+                                    </tbody>
+                                </table>
+                                <!--数据列表/-->
+                            </div>
+                            <!--游客信息/-->
+                            <!--联系人信息-->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">联系人信息</div>
+                                <div class="row data-type">
 
+                                    <div class="col-md-2 title">会员</div>
+                                    <div class="col-md-4 data text">${orderDetail.member.nickname }</div>
+
+                                    <div class="col-md-2 title">联系人</div>
+                                    <div class="col-md-4 data text">${orderDetail.member.name}</div>
+
+                                    <div class="col-md-2 title">手机号</div>
+                                    <div class="col-md-4 data text">${orderDetail.member.phoneNum}</div>
+
+                                    <div class="col-md-2 title">邮箱</div>
+                                    <div class="col-md-4 data text">${orderDetail.member.email}</div>
+
+                                </div>
+                            </div>
+                            <!--联系人信息/-->
+                            <!--费用信息-->
+                            <c:if test="${orderDetail.orderStatus==1}">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">费用信息</div>
+                                <div class="row data-type">
+                                    <div class="col-md-2 title">支付方式</div>
+                                    <div class="col-md-4 data text">在线支付-${orderDetail.payTypeStr}</div>
+                                    <div class="col-md-2 title">金额</div>
+                                    <div class="col-md-4 data text">￥${orderDetail.product.productPrice}</div>
+                                </div>
+                            </div>
+                            </c:if>
+                            <!--费用信息/-->
+                            <div class="box-tools text-center">
+                                <button type="button" class="btn bg-default" onclick="history.back(-1);">返回</button>
+                            </div>
                             <!--label显示的内容/-->
                         </div>
                         <!--tab内容/-->

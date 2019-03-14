@@ -9,7 +9,6 @@ public class Orders {
     private String orderTimeStr;
     private int orderStatus;
     private String orderStatusStr;//用户状态的判断
-
     private int peopleCount;
     private Product product;
     private List<Traveller> travellers;
@@ -57,6 +56,7 @@ public class Orders {
     }
 
     public String getOrderTimeStr() {
+        orderTimeStr = orderTime;
         return orderTimeStr;
     }
 
