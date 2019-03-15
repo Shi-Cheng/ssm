@@ -9,7 +9,7 @@ import org.apache.ibatis.annotations.Select;
 
 public interface IUserDao {
 
-    @Select("select * from user where username=#{username}")
+    @Select("select * from users where username=#{username}")
     @Results({
             @Result(id = true,property = "id",column = "id"),
             @Result(property = "username",column = "username"),
@@ -19,5 +19,5 @@ public interface IUserDao {
             @Result(property = "status",column = "status"),
             @Result(property = "roles",column = "id",javaType = Role.class,many =@Many(select = "dx.cn.dao.IRoleDao.findRoleByUserId")),
     })
-    UserInfo findById(int id);
+    UserInfo findByUsername(String username) throws Exception ;
 }

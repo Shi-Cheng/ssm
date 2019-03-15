@@ -5,43 +5,36 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<title>数据 - AdminLTE2定制版 | Log in</title>
+<title>Log in</title>
 
-<meta
-	content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
-	name="viewport">
+<meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
 
+<link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="plugins/ionicons/css/ionicons.min.css">
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/bootstrap/css/bootstrap.min.css">
+	href="plugins/adminLTE/css/AdminLTE.css">
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/font-awesome/css/font-awesome.min.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/ionicons/css/ionicons.min.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/adminLTE/css/AdminLTE.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/iCheck/square/blue.css">
+	href="plugins/iCheck/square/blue.css">
 </head>
 
 <body class="hold-transition login-page">
 	<div class="login-box">
 		<div class="login-logo">
-			<a href="#"><b>DX</b>后台管理系统</a>
+			<a href="#"><b>益联通</b>资金方管理系统</a>
 		</div>
 		<!-- /.login-logo -->
 		<div class="login-box-body">
 			<p class="login-box-msg">登录系统</p>
 
-			<form action="${pageContext.request.contextPath}/login" method="post">
+			<form action="/login" method="post">
 				<div class="form-group has-feedback">
-					<input type="text" name="username" class="form-control"
-						placeholder="用户名"> <span
-						class="glyphicon glyphicon-envelope form-control-feedback"></span>
+					<input type="text" name="username" class="form-control" placeholder="用户名">
+					<span class="glyphicon glyphicon-envelope form-control-feedback"></span>
 				</div>
 				<div class="form-group has-feedback">
-					<input type="password" name="password" class="form-control"
-						placeholder="密码"> <span
-						class="glyphicon glyphicon-lock form-control-feedback"></span>
+					<input type="password" name="password" class="form-control" placeholder="密码">
+					<span class="glyphicon glyphicon-lock form-control-feedback"></span>
 				</div>
 				<div class="row">
 					<div class="col-xs-8">
@@ -56,24 +49,17 @@
 					<!-- /.col -->
 				</div>
 			</form>
-
 			<a href="#">忘记密码</a><br>
-
-
 		</div>
 		<!-- /.login-box-body -->
 	</div>
 	<!-- /.login-box -->
-
-	<!-- jQuery 2.2.3 -->
-	<!-- Bootstrap 3.3.6 -->
-	<!-- iCheck -->
 	<script
-		src="${pageContext.request.contextPath}/plugins/jQuery/jquery-2.2.3.min.js"></script>
+		src="plugins/jQuery/jquery-2.2.3.min.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/bootstrap/js/bootstrap.min.js"></script>
+		src="plugins/bootstrap/js/bootstrap.min.js"></script>
 	<script
-		src="${pageContext.request.contextPath}/plugins/iCheck/icheck.min.js"></script>
+		src="plugins/iCheck/icheck.min.js"></script>
 	<script>
 		$(function() {
 			$('input').iCheck({

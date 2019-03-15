@@ -1,22 +1,21 @@
 package dx.cn.domain;
 
-import org.springframework.security.core.userdetails.User;
 
 import java.util.List;
 
 public class Role {
 
-    private String id;
+    private int id;
     private String roleName;
     private String roleDesc;
     private List<Permission> permissions;
-    private List<User> users;
+    private List<UserInfo> users;
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -44,18 +43,18 @@ public class Role {
         this.permissions = permissions;
     }
 
-    public List<User> getUsers() {
+    public List<UserInfo> getUsers() {
         return users;
     }
 
-    public void setUsers(List<User> users) {
+    public void setUsers(List<UserInfo> users) {
         this.users = users;
     }
 
     @Override
     public String toString() {
         return "Role{" +
-                "id='" + id + '\'' +
+                "id=" + id +
                 ", roleName='" + roleName + '\'' +
                 ", roleDesc='" + roleDesc + '\'' +
                 ", permissions=" + permissions +
