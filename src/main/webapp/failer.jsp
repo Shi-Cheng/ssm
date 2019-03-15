@@ -100,7 +100,7 @@
 								<a href="#" class="btn btn-default btn-flat">修改密码</a>
 							</div>
 							<div class="pull-right">
-								<a href="${pageContext.request.contextPath}/logout.do"
+								<a href="/logout.do"
 									class="btn btn-default btn-flat">注销</a>
 							</div>
 						</li>
@@ -207,7 +207,7 @@
 					<div class="error-content">
 						
 						<p>
-							登录失败 , 你可以 <a href="${pageContext.request.contextPath}/login.jsp">返回到登录页面</a>
+							登录失败 , 你可以 <a href="login.jsp">返回到登录页面</a>
 							重新登录
 						</p>
 

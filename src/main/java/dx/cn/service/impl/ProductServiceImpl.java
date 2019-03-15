@@ -18,10 +18,10 @@ public class ProductServiceImpl implements IProductService {
     private IProductDao productDao;
 
     @Override
-    public List<Product> findAll(int size,int page) throws Exception {
+    public List<Product> findAll(int page,int size) throws Exception {
         System.out.println("====service====");
         //参数pageNum是页码值  参数pageSize代表是每页显示条数
-        PageHelper.startPage(size,page);
+        PageHelper.startPage(page,size);
         return productDao.findAll();
     }
 
