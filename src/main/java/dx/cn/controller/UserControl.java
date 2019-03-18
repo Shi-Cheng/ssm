@@ -54,4 +54,10 @@ public class UserControl {
         userService.saveUser(user);
         return "redirect:findAll.do";
     }
+
+    @RequestMapping("/findUserByIdAndAllRole.do")
+    public ModelAndView findUserByIdAndAllRole(@RequestParam(name = "id",required = true) int id) throws Exception{
+
+        return null;
+    }
 }
